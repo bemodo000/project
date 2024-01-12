@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word2Vec Dissimilar Words</title>
+</head>
+<body>
+    <h1>Find Dissimilar Words</h1>
+    <form method="POST">
+        <label for="word">Enter a word:</label>
+        <input type="text" id="word" name="word">
+        <button type="submit">Find Dissimilar Words</button>
+    </form>
+    <div>
+        <h2>Dissimilar Words:</h2>
+        <ul>
+            {% for word, similarity in dissimilar_words %}
+                <li>{{ word }} (Dissimilarity: {{ similarity }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
